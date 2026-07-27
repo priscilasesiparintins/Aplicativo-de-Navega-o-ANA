@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANA - Álgebra para o 7º ano</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Ir para o início do app ANA">
+        <span class="brand-mark">ANA</span>
+        <span>
+          <strong>ANA</strong>
+          <small>Álgebra visual</small>
+        </span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#aprender">Aprender</a>
+        <a href="#passo">Resolver</a>
+        <a href="#jogos">Jogar</a>
+        <a href="#libras">Libras</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="titulo-hero">
+        <div class="hero-copy">
+          <p class="badge">7º ano · acessível para aluna surda</p>
+          <h1 id="titulo-hero">ANA ensina álgebra com imagens, símbolos e cores.</h1>
+          <p>
+            A estudante aprende no próprio ritmo: vê a ideia, acompanha a
+            resolução, pratica no jogo e pode assistir à explicação em Libras.
+          </p>
+          <div class="hero-actions" aria-label="Atalhos principais">
+            <a class="button primary" href="#aprender">Começar aula</a>
+            <a class="button secondary" href="#jogos">Ir para o jogo</a>
+          </div>
+        </div>
+
+        <figure class="hero-image">
+          <img
+            src="assets/ana_hero_modificado.png"
+            alt="Ilustração do app ANA com álgebra visual, equação x mais 3 igual a 9, passos coloridos e vídeo em Libras"
+          />
+        </figure>
+      </section>
+
+      <section id="aprender" class="band learning" aria-labelledby="titulo-aprender">
+        <div class="section-title">
+          <p class="eyebrow">Explicações simples e visuais</p>
+          <h2 id="titulo-aprender">Primeiro, entenda a ideia</h2>
+        </div>
+
+        <div class="concept-grid">
+          <article class="concept">
+            <div class="icon-box blue">x</div>
+            <h3>Incógnita</h3>
+            <p>A letra é um número escondido. O objetivo é descobrir qual é esse número.</p>
+          </article>
+          <article class="concept">
+            <div class="icon-box green">=</div>
+            <h3>Equilíbrio</h3>
+            <p>O sinal de igual mostra que os dois lados precisam valer a mesma coisa.</p>
+          </article>
+          <article class="concept">
+            <div class="icon-box coral">−</div>
+            <h3>Ação inversa</h3>
+            <p>Para desfazer uma soma, usamos subtração. Para desfazer multiplicação, usamos divisão.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="passo" class="workspace" aria-labelledby="titulo-passo">
+        <div class="panel explainer">
+          <p class="eyebrow">Equações de 1º grau</p>
+          <h2 id="titulo-passo">Resolver: x + 3 = 9</h2>
+          <div class="steps" id="steps" aria-live="polite"></div>
+          <div class="step-controls">
+            <button id="prevStep" type="button" aria-label="Voltar passo">←</button>
+            <button id="nextStep" type="button" aria-label="Próximo passo">→</button>
+          </div>
+        </div>
+
+        <div class="panel equation-tool" aria-labelledby="titulo-ferramenta">
+          <p class="eyebrow">Monte e veja</p>
+          <h2 id="titulo-ferramenta">Crie uma equação</h2>
+          <label for="constant">Número somado ao x</label>
+          <input id="constant" type="range" min="1" max="9" value="4" />
+          <label for="result">Resultado da equação</label>
+          <input id="result" type="range" min="5" max="18" value="12" />
+          <div class="equation-preview" id="equationPreview"></div>
+          <p class="answer" id="answer" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section id="jogos" class="band games" aria-labelledby="titulo-jogos">
+        <div class="section-title">
+          <p class="eyebrow">Atividades interativas e jogos matemáticos</p>
+          <h2 id="titulo-jogos">Jogo: qual é o valor de x?</h2>
+        </div>
+
+        <div class="game-area">
+          <div class="challenge">
+            <p id="challengeText">x + 5 = 13</p>
+            <div class="visual-row" id="challengeVisual" aria-hidden="true"></div>
+          </div>
+          <div class="choices" id="choices" aria-label="Opções de resposta"></div>
+          <p class="feedback" id="feedback" aria-live="polite"></p>
+          <button class="button primary" id="newChallenge" type="button">Nova pergunta</button>
+        </div>
+      </section>
+
+      <section id="libras" class="libras" aria-labelledby="titulo-libras">
+        <div>
+          <p class="eyebrow">Vídeos explicativos em Libras</p>
+          <h2 id="titulo-libras">Espaço para Libras</h2>
+          <p>
+            Use estes blocos para inserir vídeos gravados pela professora,
+            intérprete ou escola. Cada vídeo pode explicar um conceito com Libras,
+            imagem e exemplo curto.
+          </p>
+        </div>
+        <div class="video-grid">
+          <article class="video-card">
+            <video controls preload="metadata" style="width:100%;border-radius:12px;"><source src="assets/video1.mp4" type="video/mp4"></video>
+            <h3>O que é incógnita?</h3>
+          </article>
+          <article class="video-card">
+            <video controls preload="metadata" style="width:100%;border-radius:12px;"><source src="assets/video2.mp4" type="video/mp4"></video>
+            <h3>Como isolar o x?</h3>
+          </article>
+          <article class="video-card">
+            <video controls preload="metadata" style="width:100%;border-radius:12px;"><source src="assets/video3.mp4" type="video/mp4"></video>
+            <h3>Como conferir a resposta?</h3>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
